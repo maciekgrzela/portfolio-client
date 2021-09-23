@@ -1,2 +1,2 @@
-# portfolio-client
-Client side dla osobistego portfolio
+# Portfolio - Client
+Client side dla osobistego portfolio przedstawiającego wykonane projekty
