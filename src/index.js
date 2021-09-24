@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import store from './State/store';
 import moment from 'moment';
 import Moment from 'react-moment';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export const history = createBrowserHistory();
 

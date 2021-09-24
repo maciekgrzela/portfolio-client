@@ -56,6 +56,20 @@ a:hover {
   text-decoration: underline;
 }
 
+button {
+  border: none;
+  padding: 5px 3px;
+  border-radius: 7px;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.1);
+}
+
+button.darken:hover {
+  box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.1);
+}
+
 .faded {
   color: $text-faded-color;
 }
@@ -112,4 +126,17 @@ a:hover {
     display: flex;
     align-items: flex-end;
   }
+}
+
+.requirement-icon {
+  border-radius: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  min-width: 50px;
+  min-height: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
 }

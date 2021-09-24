@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
+import welcomePhoto from '../../Assets/Images/welcome_photo.png';
+import {
+  AiFillLinkedin,
+  AiFillTwitterCircle,
+  AiFillFacebook,
+  AiFillInstagram,
+} from 'react-icons/ai';
+import { IoDocumentText } from 'react-icons/io5';
 
 const colors = ['#afdb2f', '#f4e274', '#3a92bb', '#a11f2d', '#ad7db6'];
 
 const Welcome = () => {
   return (
-    <section className='portfolio-page__welcome welcome-section'>
+    <section className='portfolio-page__section welcome-section'>
       <div className='welcome-section__typing'>
         <div>
           <span className='mr-1'>Witaj:</span>
@@ -13,7 +21,7 @@ const Welcome = () => {
             text={[
               'Programisto!',
               "HR'owcu!",
-              'Web Developerze!',
+              "Web Dev'ie!",
               'Front-endowcu!',
               'Back-endowcu!',
               'Dev-opsie!',
@@ -38,9 +46,32 @@ const Welcome = () => {
           />
         </div>
         <span className='welcome-section__description'>
-          Bardzo miło mi że tu jesteś! W poniższych sekcjach znajdziesz
-          informacje o mnie oraz realizowanych przeze mnie projektach.
+          Bardzo miło mi że tu jesteś! W kolejnych sekcjach{' '}
+          <span>(psst. scrolluj w dół)</span> dowiesz się więcej o mnie, a także
+          o realizowanych przeze mnie projektach. Jeśli jesteś
+          zainteresowany/(a) którymś z nich bądź chcesz podjąć współpracę,
+          zapraszam Cię do kontaktu poprzez jeden z poniższych odnośników.
         </span>
+        <div className='welcome-section__socials'>
+          <button className='welcome-section__social-btn'>
+            <AiFillLinkedin /> /maciekgrzela
+          </button>
+          <button className='welcome-section__social-btn'>
+            <AiFillTwitterCircle /> @maciekgrzela
+          </button>
+          <button className='welcome-section__social-btn'>
+            <AiFillFacebook /> maciekgrzela45
+          </button>
+          <button className='welcome-section__social-btn'>
+            <AiFillInstagram /> maciekgrzela
+          </button>
+          <button className='welcome-section__social-btn'>
+            <IoDocumentText /> Formularz kontaktowy
+          </button>
+        </div>
+      </div>
+      <div className='welcome-section__photo'>
+        <img style={{ width: 500 }} src={welcomePhoto} alt='Portfolio' />
       </div>
     </section>
   );
