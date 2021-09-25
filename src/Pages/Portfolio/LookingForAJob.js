@@ -53,7 +53,7 @@ const LookingForAJob = () => {
             </span>
           </div>
         </div>
-        <h4>lub: </h4>
+        <h4 className='job-section__or'>lub: </h4>
         <div className='job-section__requirement'>
           <div className='job-section__requirement'>
             <div className='job-section__requirement-item'>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { SiGithub } from 'react-icons/si';
 import { Carousel } from 'react-responsive-carousel';
 

@@ -674,6 +674,28 @@ button.darken:hover {
           align-items: center;
 }
 
+.job-section__or {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.job-section__or::after, .job-section__or::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 1px;
+  background-color: #cccccc;
+  margin: 0 20px;
+}
+
 .job-section__requirement-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,5 +802,153 @@ button.darken:hover {
 
 .images-slider__carousel img {
   padding: 40px;
+}
+
+.about-section {
+  height: 100vh;
+}
+
+.about-section__content {
+  padding: 10px 20px;
+}
+
+.about-section__content p {
+  font-size: 1.2rem;
+  text-align: justify;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.about-section__icons {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+}
+
+.about-section__icons svg {
+  fill: white;
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+}
+
+.technologies-section {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.527)), to(rgba(0, 0, 0, 0.5))), url("https://www.toptal.com/designers/subtlepatterns/patterns/dark-honeycomb.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("https://www.toptal.com/designers/subtlepatterns/patterns/dark-honeycomb.png");
+  background-attachment: fixed;
+  padding-bottom: 50px;
+}
+
+.technologies-section__content {
+  padding: 10px 20px;
+}
+
+.technologies-section__content p {
+  font-size: 1.2rem;
+  text-align: justify;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.technologies-section__lists {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.technologies-list__items {
+  padding-left: 20px;
+  font-weight: 200;
+  color: #4d83de;
+}
+
+.technologies-list__title {
+  display: block;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.technologies-list li:nth-child(1) {
+  font-size: calc(2rem - 0.25rem);
+  font-weight: calc(500 - (1 * 100));
+}
+
+.technologies-list li:nth-child(2) {
+  font-size: calc(2rem - 0.5rem);
+  font-weight: calc(500 - (2 * 100));
+}
+
+.technologies-list li:nth-child(3) {
+  font-size: calc(2rem - 0.75rem);
+  font-weight: calc(500 - (3 * 100));
+}
+
+.achievements-section,
+.work-experience-section {
+  padding-bottom: 50px;
+}
+
+.achievements-section ul,
+.work-experience-section ul {
+  list-style-type: none;
+}
+
+.achievements-section ul li,
+.work-experience-section ul li {
+  position: relative;
+  padding: 20px;
+  font-size: 1.3rem;
+}
+
+.achievements-section ul li span,
+.work-experience-section ul li span {
+  font-weight: 300;
+  margin-right: 30px;
+}
+
+.achievements-section ul li::before,
+.work-experience-section ul li::before {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 25px;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+  border-radius: 50%;
+  background: white;
+}
+
+.achievements-section ul li:not(:last-child)::after,
+.work-experience-section ul li:not(:last-child)::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  left: -8px;
+  background: white;
+  top: 50%;
+  height: 100%;
+}
+
+.work-experience-section {
+  background-color: #191919;
 }
 /*# sourceMappingURL=style.css.map */
