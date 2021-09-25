@@ -3,7 +3,10 @@ import SectionsHeader from '../../Components/SectionsHeader';
 
 const Achievements = () => {
   return (
-    <section className='portfolio-page__section achievements-section'>
+    <section
+      id='achievements'
+      className='portfolio-page__section achievements-section'
+    >
       <SectionsHeader title='Osiągnięcia' subtitle='Naukowe i informatyczne' />
       <article className='achievements-section__content'>
         <ul>

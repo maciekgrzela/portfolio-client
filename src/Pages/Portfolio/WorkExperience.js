@@ -3,7 +3,10 @@ import SectionsHeader from '../../Components/SectionsHeader';
 
 const WorkExperience = () => {
   return (
-    <section className='portfolio-page__section work-experience-section'>
+    <section
+      id='work-experience'
+      className='portfolio-page__section work-experience-section'
+    >
       <SectionsHeader
         title='Doświadczenie w pracy'
         subtitle='Dla kogo pisałem kod'

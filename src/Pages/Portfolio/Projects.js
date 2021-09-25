@@ -5,7 +5,7 @@ import ProjectsSlider from './ProjectsSlider';
 
 const Projects = () => {
   return (
-    <section className='portfolio-page__section projects-section'>
+    <section id='projects' className='portfolio-page__section projects-section'>
       <SectionsHeader
         title='Realizowane projekty'
         subtitle={

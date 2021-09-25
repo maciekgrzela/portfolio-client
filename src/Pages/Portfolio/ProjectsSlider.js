@@ -225,7 +225,7 @@ const ProjectsSlider = () => {
             Et irure ex labore id tempor dolor cillum minim eu. Minim fugiat
             officia nisi sit ex mollit consequat ea nulla cupidatat id sint.
           </p>
-          <button className='project-slide__repository'>
+          <button className='project-slide__repository darken'>
             <SiGithub /> Przejdź do repozytorium
           </button>
         </div>

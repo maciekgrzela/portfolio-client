@@ -3,7 +3,10 @@ import SectionsHeader from '../../Components/SectionsHeader';
 
 const Technologies = () => {
   return (
-    <section className='portfolio-page__section technologies-section'>
+    <section
+      id='technologies'
+      className='portfolio-page__section technologies-section'
+    >
       <SectionsHeader
         title='Wykorzystywane technologie'
         subtitle='W czym do tej pory pracowałem i w czym lubię pracować'

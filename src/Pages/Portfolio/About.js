@@ -6,7 +6,7 @@ import { ReactComponent as Vinyl } from '../../Assets/Images/vinyl.svg';
 
 const About = () => {
   return (
-    <section className='portfolio-page__section about-section'>
+    <section id='about' className='portfolio-page__section about-section'>
       <SectionsHeader
         title='Kilka słów o mnie'
         subtitle='Kim jestem i czym się zajmuje'

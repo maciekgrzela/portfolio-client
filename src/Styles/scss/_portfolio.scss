@@ -143,6 +143,10 @@
 }
 
 .projects-slider {
+  &__projects {
+    margin-top: 30px;
+  }
+
   &__project {
     height: 70vh;
     background-color: lighten($black-color, 20);
@@ -189,6 +193,12 @@
     text-align: justify;
     font-weight: 300;
     flex-grow: 1;
+  }
+
+  &__repository {
+    background-color: $white-color;
+    padding: 10px 0;
+    font-size: 1rem;
   }
 }
 
@@ -330,4 +340,20 @@
 
 .work-experience-section {
   background-color: #191919;
+}
+
+.abilities-section {
+  &__progress {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & svg {
+      flex-basis: 20%;
+      margin: 40px 10px;
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
