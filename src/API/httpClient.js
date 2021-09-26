@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'https://localhost:5001/api';
 
 axios.interceptors.request.use(
   (config) => {
@@ -32,8 +32,13 @@ const projects = {
   getAll: () => requests.get('/projects'),
 };
 
+const user = {
+  introduce: () => requests.get('/auth/introduce'),
+};
+
 const api = {
   projects,
+  user,
 };
 
 export default api;

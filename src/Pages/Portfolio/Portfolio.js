@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Abilities from './Abilities';
 import About from './About';
 import Achievements from './Achievements';
@@ -9,10 +10,12 @@ import Welcome from './Welcome';
 import WorkExperience from './WorkExperience';
 
 const Portfolio = () => {
+  const user = useSelector((state) => state.users.info);
+
   return (
     <main className='portfolio-page'>
       <Welcome />
-      <LookingForAJob />
+      {user.lookingForAJob && <LookingForAJob />}
       <Projects />
       <About />
       <Technologies />

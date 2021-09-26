@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import welcomePhoto from '../../Assets/Images/welcome_photo.png';
-import {
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-  AiFillFacebook,
-  AiFillInstagram,
-} from 'react-icons/ai';
 import { IoDocumentText } from 'react-icons/io5';
+import { useSelector } from 'react-redux';
+import SocialIconComponent from '../../Components/SocialIconComponent';
+import { Link } from 'react-router-dom';
 
 const colors = ['#afdb2f', '#f4e274', '#3a92bb', '#a11f2d', '#ad7db6'];
 
 const Welcome = () => {
+  const socials = useSelector((state) => state.users.info.socialMediaLinks);
+
   return (
     <section className='portfolio-page__section welcome-section'>
       <div className='welcome-section__typing'>
@@ -53,18 +52,14 @@ const Welcome = () => {
           zapraszam Cię do kontaktu poprzez jeden z poniższych odnośników.
         </span>
         <div className='welcome-section__socials'>
-          <button className='welcome-section__social-btn'>
-            <AiFillLinkedin /> /maciekgrzela
-          </button>
-          <button className='welcome-section__social-btn'>
-            <AiFillTwitterCircle /> @maciekgrzela
-          </button>
-          <button className='welcome-section__social-btn'>
-            <AiFillFacebook /> maciekgrzela45
-          </button>
-          <button className='welcome-section__social-btn'>
-            <AiFillInstagram /> maciekgrzela
-          </button>
+          {socials.map((social) => (
+            <button className='welcome-section__social-btn'>
+              <Link to={{ pathname: social.path }}>
+                <SocialIconComponent platform={social.platform} />
+                {social.displayedName}
+              </Link>
+            </button>
+          ))}
           <button className='welcome-section__social-btn'>
             <IoDocumentText /> Formularz kontaktowy
           </button>
