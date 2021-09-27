@@ -1,0 +1,78 @@
+.contact {
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/y-so-serious-white.png');
+  color: $black-color;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 500px;
+    min-height: 75vh;
+    background-color: $white-color;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    & h1 {
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+
+    & h4 {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  &__input {
+    padding: 10px;
+    background-color: $white-color;
+    outline: none;
+    border: 2px solid $black-color;
+    border-radius: 5px;
+  }
+
+  &__submit {
+    background-color: $black-color;
+    color: $white-color;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  &__field-error {
+    font-size: 0.8rem;
+    color: $danger-color;
+  }
+
+  &__status-msg {
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+
+    &--error {
+      background-color: rgba($danger-color, 0.6);
+      border: 2px solid $danger-color;
+      color: $danger-color;
+    }
+
+    &--success {
+      background-color: rgba($success-color, 0.6);
+      border: 2px solid $success-color;
+      color: $success-color;
+    }
+  }
+}
