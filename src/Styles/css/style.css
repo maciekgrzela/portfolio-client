@@ -175,6 +175,66 @@ button.darken:hover {
   font-size: 4rem;
 }
 
+.full-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 200000;
+}
+
+.full-image-modal__image {
+  max-height: 90vh;
+}
+
+.fetching-error,
+.loading-page-component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fetching-error__icon,
+.loading-page-component__icon {
+  font-size: 100px;
+}
+
+.fetching-error__text,
+.loading-page-component__text {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.loading-page-component__text {
+  font-size: 1.5rem;
+}
+
 .m-0 {
   margin: 0rem;
 }
@@ -546,6 +606,10 @@ button.darken:hover {
   padding: 0 100px;
 }
 
+.portfolio-page__section.projects-section {
+  min-height: 100vh;
+}
+
 .welcome-section {
   display: -ms-grid;
   display: grid;
@@ -716,7 +780,6 @@ button.darken:hover {
 }
 
 .projects-section {
-  height: 100vh;
   background-color: #1a1a1a;
 }
 
@@ -748,6 +811,23 @@ button.darken:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  min-height: 550px;
+}
+
+.project-slide ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.project-slide ::-webkit-scrollbar-track {
+  background: #cccccc;
+}
+
+.project-slide ::-webkit-scrollbar-thumb {
+  background: #666666;
+}
+
+.project-slide ::-webkit-scrollbar-thumb:hover {
+  background: #666666;
 }
 
 .project-slide__images {
@@ -780,6 +860,14 @@ button.darken:hover {
   color: #e6e6e6;
 }
 
+.project-slide__responsibility {
+  text-align: left;
+  font-weight: 300;
+  color: #b3b3b3;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .project-slide__tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -794,6 +882,10 @@ button.darken:hover {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  overflow-y: auto;
+  min-height: 200px;
+  margin: 20px 0;
+  padding-right: 20px;
 }
 
 .project-slide__repository {
@@ -802,16 +894,33 @@ button.darken:hover {
   font-size: 1rem;
 }
 
+.images-slider {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.images-slider__images {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .images-slider__carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70vh;
-  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .images-slider__carousel img {
-  padding: 40px;
+  padding: 0 30px;
 }
 
 .about-section {
@@ -980,5 +1089,103 @@ button.darken:hover {
   margin: 40px 10px;
   width: 150px;
   height: 150px;
+}
+
+.contact {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/y-so-serious-white.png");
+  color: black;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__container {
+  width: 500px;
+  min-height: 75vh;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__header h1 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.contact__header h4 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact__input {
+  padding: 10px;
+  background-color: white;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.contact__submit {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.contact__field-error {
+  font-size: 0.8rem;
+  color: #dc3545;
+}
+
+.contact__status-msg {
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.contact__status-msg--error {
+  background-color: rgba(220, 53, 69, 0.6);
+  border: 2px solid #dc3545;
+  color: #dc3545;
+}
+
+.contact__status-msg--success {
+  background-color: rgba(25, 135, 84, 0.6);
+  border: 2px solid #198754;
+  color: #198754;
 }
 /*# sourceMappingURL=style.css.map */

@@ -140,3 +140,48 @@ button.darken:hover {
   align-items: center;
   font-size: 4rem;
 }
+
+.full-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200000;
+
+  &__image {
+    max-height: 90vh;
+  }
+}
+
+.fetching-error,
+.loading-page-component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    font-size: 100px;
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+.loading-page-component {
+  &__text {
+    font-size: 1.5rem;
+  }
+}

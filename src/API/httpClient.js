@@ -36,9 +36,14 @@ const user = {
   introduce: () => requests.get('/auth/introduce'),
 };
 
+const contact = {
+  send: (body) => requests.post('/contact', body),
+};
+
 const api = {
   projects,
   user,
+  contact,
 };
 
 export default api;

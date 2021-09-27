@@ -8,6 +8,10 @@
       height: calc(100vh - 50px);
       padding: 0 100px;
     }
+
+    &.projects-section {
+      min-height: 100vh;
+    }
   }
 }
 
@@ -138,7 +142,6 @@
 }
 
 .projects-section {
-  height: 100vh;
   background-color: lighten($black-color, 10);
 }
 
@@ -161,6 +164,24 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  min-height: 550px;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: darken($white-color, 20);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: lighten($dark-color, 40);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten($dark-color, 40);
+  }
+
   &__images {
     flex-basis: 60%;
   }
@@ -184,6 +205,14 @@
     color: darken($white-color, 10);
   }
 
+  &__responsibility {
+    text-align: left;
+    font-weight: 300;
+    color: darken($white-color, 30);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
   &__tags {
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +222,10 @@
     text-align: justify;
     font-weight: 300;
     flex-grow: 1;
+    overflow-y: auto;
+    min-height: 200px;
+    margin: 20px 0;
+    padding-right: 20px;
   }
 
   &__repository {
@@ -203,13 +236,22 @@
 }
 
 .images-slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  &__images {
+    width: 100%;
+    display: flex;
+  }
+
   &__carousel {
     display: flex;
-    height: 70vh;
-    padding: 20px;
+    align-items: center;
+    height: 100%;
 
     & img {
-      padding: 40px;
+      padding: 0 30px;
     }
   }
 }

@@ -61,7 +61,9 @@ const Welcome = () => {
             </button>
           ))}
           <button className='welcome-section__social-btn'>
-            <IoDocumentText /> Formularz kontaktowy
+            <Link to='/contact'>
+              <IoDocumentText /> Formularz kontaktowy
+            </Link>
           </button>
         </div>
       </div>

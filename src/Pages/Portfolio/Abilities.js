@@ -25,6 +25,7 @@ const Abilities = () => {
               pathColor: '#4d83de',
               trailColor: '#eee',
               textColor: '#4d83de',
+              textSize: '0.95rem',
             })}
           />
         ))}
