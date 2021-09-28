@@ -67,9 +67,9 @@ const ProjectsSlider = () => {
                     <SiGithub /> Repozytorium prywatne. Chcesz zobaczyć? Napisz!
                   </Link>
                 ) : (
-                  <Link to={{ pathname: project.repositoryLink }}>
+                  <a href={project.repositoryLink}>
                     <SiGithub /> Przejdź do repozytorium
-                  </Link>
+                  </a>
                 )}
               </button>
             </div>

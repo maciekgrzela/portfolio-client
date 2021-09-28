@@ -54,10 +54,10 @@ const Welcome = () => {
         <div className='welcome-section__socials'>
           {socials.map((social) => (
             <button className='welcome-section__social-btn'>
-              <Link to={{ pathname: social.path }}>
+              <a href={social.path}>
                 <SocialIconComponent platform={social.platform} />
                 {social.displayedName}
-              </Link>
+              </a>
             </button>
           ))}
           <button className='welcome-section__social-btn'>
