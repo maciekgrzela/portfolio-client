@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://localhost:5001/api';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 axios.interceptors.request.use(
   (config) => {
@@ -12,11 +12,6 @@ axios.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-
-axios.interceptors.response.use(undefined, (error) => {
-  const { data, status } = error.response;
-  return Promise.reject(error);
-});
 
 const responseBody = (res) => res.data;
 
