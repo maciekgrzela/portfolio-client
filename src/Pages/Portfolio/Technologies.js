@@ -14,22 +14,22 @@ const Technologies = () => {
       <article className='technologies-section__content'>
         <p>
           Rozpoczynając swoją przygodę z programowaniem, pierwszą technologią z
-          którą miałem styczność, był język strukturalny Pascal. Z dzisiejszej
-          perspektywy, uważam że był to naprawdę dobry wybór, gdyż umożliwił mi
-          poznanie podstawowych konceptów i prostych algorytmów, w stosunkowo
-          przyjazny sposób. Po roku nauki tego języka, zacząłem programować w
+          jaką miałem styczność, był język strukturalny Pascal. Z dzisiejszej
+          perspektywy, uważam że był to naprawdę dobry wybór gdyż pozwolił mi on
+          w przyjazny sposób poznać podstawowe koncepty programowania, a także
+          proste algorytmy. Po roku nauki tego języka, zacząłem programować w
           C++. Przejście pomiędzy tymi technologiami, okazało się relatywnie
           łatwe, a sam język dostarczył możliwości nauczenia się trochę bardziej
           zaawansowanych konceptów związanych np. z alokacją pamięci, czy też
           programowaniem obiektowym. Tworzenie programów konsolowych, sprawia że
-          człowiek potrafi się wiele nauczyć, jednakże na dłuższą metę jest
-          nudne. Dlatego też, zainteresowałem się programowaniem webowym.
-          Początkowo, wykorzystywanymi przeze mnie technologiami były języki PHP
-          i SQL do tworzenia aplikacji serwerowej, oraz zestaw
-          HTML/JS(jQuery)/CSS do budowy warstwy klienckiej. Następnie, na skutek
-          zarówno szkolnych jak i uczelnianych praktyk, zmieniłem moje podejście
-          do web developmentu i zacząłem wykorzystywać takie technologie jak
-          .NET, NodeJS, czy React.
+          człowiek potrafi się wiele nauczyć, jednakże na dłuższą metę,
+          programom takim brak aspektu praktycznego. Dlatego też,
+          zainteresowałem się programowaniem webowym. Początkowo,
+          wykorzystywanymi przeze mnie technologiami były języki PHP i SQL do
+          tworzenia warstwy serwerowej, oraz zestaw HTML/JS(jQuery)/CSS do
+          budowy warstwy klienckiej. Następnie, na skutek zarówno szkolnych jak
+          i uczelnianych praktyk, zmieniłem moje podejście do web developmentu i
+          zacząłem wykorzystywać takie technologie jak .NET, NodeJS, czy React.
         </p>
         <p>
           Poza rozwojem aplikacji webowych, dzięki studiom miałem okazję poznać
