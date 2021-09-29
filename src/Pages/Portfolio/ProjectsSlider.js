@@ -17,7 +17,6 @@ const ProjectsSlider = () => {
         showArrows={true}
         showIndicators={false}
         showStatus={false}
-        width='90vw'
       >
         {projects.map((project) => (
           <div className='projects-slider__project project-slide'>

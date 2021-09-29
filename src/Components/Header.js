@@ -12,24 +12,22 @@ const Header = () => {
 
   return (
     <header className='page-header'>
-      {location.pathname !== '/' ? (
-        <Link to='/'>
-          <h1 className='page-header__logo'>
-            <BsArrowLeft className='page-header__icon' />
-            Powrót do strony głównej
-          </h1>
-        </Link>
-      ) : (
-        <>
-          <Link to='/'>
-            <h1 className='page-header__logo'>
+      <Link to='/'>
+        <h1 className='page-header__logo'>
+          {location.pathname !== '/' ? (
+            <>
+              <BsArrowLeft className='page-header__icon' />
+              Powrót do strony głównej
+            </>
+          ) : (
+            <>
               <HiCode className='page-header__icon' />
               {`${user.firstName} ${user.lastName}`}
-            </h1>
-          </Link>
-          <HeaderNav user={user} />
-        </>
-      )}
+            </>
+          )}
+        </h1>
+      </Link>
+      {location.pathname === '/' && <HeaderNav user={user} />}
     </header>
   );
 };

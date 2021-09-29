@@ -9,76 +9,59 @@ import {
   SiReact,
   SiHtml5,
 } from 'react-icons/si';
+import LookingForAJobRequirementItem from './Components/LookingForAJob/LookingForAJobRequirementItem';
 
 const LookingForAJob = () => {
   return (
     <section className='portfolio-page__section job-section'>
       <SectionsHeader
-        title='Gotowy na kolejne wyzwania!'
-        subtitle='Czego poszukuję?'
+        title='Jestem gotowy na kolejne wyzwania!'
+        subtitle='Jakiej pracy poszukuję?'
       />
       <article className='job-section__requirements'>
         <div className='job-section__requirement'>
-          <div className='job-section__requirement-item'>
-            <RequirementIcon icon={<FaUserTie />} color='#4D83DE' />
-            <span className='job-section__requirement-desc faded'>
-              Stanowisko
-            </span>
-            <span className='job-section__requirement-title'>
-              Junior Full-Stack web Developer
-            </span>
-          </div>
-          <div className='job-section__requirement-item'>
-            <div className='job-section__requirement-icons'>
-              <RequirementIcon icon={<SiDotNet />} color='#613BA2' />
-              <RequirementIcon icon={<FaNodeJs />} color='#83CD29' />
-            </div>
-            <span className='job-section__requirement-desc faded'>Backend</span>
-            <span className='job-section__requirement-title'>
-              .NET / NodeJS
-            </span>
-          </div>
-          <div className='job-section__requirement-item'>
-            <div className='job-section__requirement-icons'>
-              <RequirementIcon icon={<SiHtml5 />} color='#F16524' />
-              <RequirementIcon icon={<SiCss3 />} color='#33A9DC' />
-              <RequirementIcon icon={<SiJavascript />} color='#F7E018' />
-              <RequirementIcon icon={<SiReact />} color='#292C33' />
-            </div>
-            <span className='job-section__requirement-desc faded'>
-              Frontend
-            </span>
-            <span className='job-section__requirement-title'>
-              HTML/CSS/JS/React
-            </span>
-          </div>
+          <LookingForAJobRequirementItem
+            description='Stanowisko'
+            icons={[<RequirementIcon icon={<FaUserTie />} color='#4D83DE' />]}
+            title='Junior Full-Stack web Developer'
+          />
+          <LookingForAJobRequirementItem
+            description='Backend'
+            icons={[
+              <RequirementIcon icon={<SiDotNet />} color='#613BA2' />,
+              <RequirementIcon icon={<FaNodeJs />} color='#83CD29' />,
+            ]}
+            title='.NET / NodeJS'
+          />
+          <LookingForAJobRequirementItem
+            description='Frontend'
+            icons={[
+              <RequirementIcon icon={<SiHtml5 />} color='#F16524' />,
+              <RequirementIcon icon={<SiCss3 />} color='#33A9DC' />,
+              <RequirementIcon icon={<SiJavascript />} color='#F7E018' />,
+              <RequirementIcon icon={<SiReact />} color='#292C33' />,
+            ]}
+            title='HTML/CSS/JS/React'
+          />
         </div>
         <h4 className='job-section__or'>lub: </h4>
         <div className='job-section__requirement'>
           <div className='job-section__requirement'>
-            <div className='job-section__requirement-item'>
-              <RequirementIcon icon={<FaUserTie />} color='#4D83DE' />
-              <span className='job-section__requirement-desc faded'>
-                Stanowisko
-              </span>
-              <span className='job-section__requirement-title'>
-                Junior Front-end web Developer
-              </span>
-            </div>
-            <div className='job-section__requirement-item ml-2'>
-              <div className='job-section__requirement-icons'>
-                <RequirementIcon icon={<SiHtml5 />} color='#F16524' />
-                <RequirementIcon icon={<SiCss3 />} color='#33A9DC' />
-                <RequirementIcon icon={<SiJavascript />} color='#F7E018' />
-                <RequirementIcon icon={<SiReact />} color='#292C33' />
-              </div>
-              <span className='job-section__requirement-desc faded'>
-                Frontend
-              </span>
-              <span className='job-section__requirement-title'>
-                HTML/CSS/JS/React
-              </span>
-            </div>
+            <LookingForAJobRequirementItem
+              description='Stanowisko'
+              icons={[<RequirementIcon icon={<FaUserTie />} color='#4D83DE' />]}
+              title='Junior Frontend Developer'
+            />
+            <LookingForAJobRequirementItem
+              description='Frontend'
+              icons={[
+                <RequirementIcon icon={<SiHtml5 />} color='#F16524' />,
+                <RequirementIcon icon={<SiCss3 />} color='#33A9DC' />,
+                <RequirementIcon icon={<SiJavascript />} color='#F7E018' />,
+                <RequirementIcon icon={<SiReact />} color='#292C33' />,
+              ]}
+              title='HTML/CSS/JS/React'
+            />
           </div>
         </div>
       </article>
