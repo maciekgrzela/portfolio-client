@@ -1,8 +1,12 @@
 import React from 'react';
 
-const HeaderNavItem = ({ link, title }) => {
+const HeaderNavItem = ({ link, title, toggle }) => {
   return (
-    <a href={`#${link}`} className='header-links__link'>
+    <a
+      href={`#${link}`}
+      onClick={() => toggle()}
+      className='header-links__link'
+    >
       {title}
     </a>
   );

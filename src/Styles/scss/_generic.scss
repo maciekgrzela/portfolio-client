@@ -3,6 +3,7 @@
   font-family: 'Oswald', sans-serif;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
@@ -25,26 +26,45 @@ h6 {
 
 h1 {
   font-size: 2.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.3rem;
+  }
 }
 
 h2 {
   font-size: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 }
 
 h3 {
   font-size: 1.75rem;
+  @media (max-width: 768px) {
+    font-size: 1.55rem;
+  }
 }
 
 h4 {
   font-size: 1.5rem;
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 }
 
 h5 {
   font-size: 1.25rem;
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+  }
 }
 
 h6 {
   font-size: 1rem;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 }
 
 a {
@@ -83,8 +103,11 @@ button.darken:hover {
 
 .page-header {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
   padding: 0 30px;
 
   &__logo {
@@ -103,7 +126,45 @@ button.darken:hover {
 }
 
 .header-links {
+  $this: &;
+
+  @media (max-width: 768px) {
+    display: none;
+
+    &--toggled {
+      position: fixed;
+      margin-left: 0 !important;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $black-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+
+      #{$this}__close {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.5rem;
+      }
+
+      #{$this}__close-icon path {
+        stroke: $white-color;
+        width: 30px;
+      }
+
+      #{$this}__link {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
   display: flex;
+  flex-grow: 1;
 
   &__link {
     margin: 0 5px;
@@ -111,6 +172,15 @@ button.darken:hover {
     font-size: 1rem;
     font-weight: 100;
     color: darken($white-color, 20);
+    background-color: transparent;
+
+    &--toggle {
+      display: none;
+      font-size: 1.7rem;
+      @media (max-width: 768px) {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -132,8 +202,13 @@ button.darken:hover {
   border-radius: 100%;
   max-width: 150px;
   max-height: 150px;
-  min-width: 50px;
-  min-height: 50px;
+
+  @media (max-width: 576px) {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    font-size: 2rem;
+  }
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -183,5 +258,29 @@ button.darken:hover {
 .loading-page-component {
   &__text {
     font-size: 1.5rem;
+  }
+}
+
+.sections-header {
+  @media (max-width: 992px) {
+    padding-left: 20px;
+  }
+}
+
+@mixin gray-scrollbar {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: darken($white-color, 20);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: lighten($dark-color, 40);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten($dark-color, 40);
   }
 }
